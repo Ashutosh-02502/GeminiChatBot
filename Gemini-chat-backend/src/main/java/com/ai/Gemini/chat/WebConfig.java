@@ -9,7 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173/")
+                .allowedOrigins("https://geminichatbot-frontend1.onrender.com")
                 .allowedMethods("GET", "PUT", "POST", "DELETE")
                 .allowedHeaders("*")
                 .allowCredentials(true);
