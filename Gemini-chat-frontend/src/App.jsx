@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import { fetchChatResponse } from './services/api';
-import ChatResponse from './Components/ChatResponse';
-import ChatInput from './Components/ChatInput';
+import ChatResponse from './components/ChatResponse';
+import ChatInput from './components/ChatInput';
 
 function App() {
   const [response, setResponse] = useState(null);
