@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-
 import { fetchChatResponse } from './services/api';
 import ChatResponse from './Components/ChatResponse';
 import ChatInput from './Components/ChatInput';
@@ -24,13 +23,28 @@ function App() {
 
   return (
     <div className='App'>
-      <header className='bg-primary text-white text-center py-4'>
-        <h1>Gemini ChatBot</h1>
+      <header>
+        <div className="header-content">
+          <h1>Gemini ChatBot</h1>
+          <div className="header-line"></div>
+          <p className="header-subtitle">Your AI Assistant</p>
+        </div>
       </header>
+
       <ChatInput onSubmit={handleQuestionSubmit}/>
-      {loading &&  <h3>Loading...</h3>}
-        <ChatResponse response={response} />
-      {/* RESPONSE */}
+      
+      {loading && (
+        <div className="loading-container">
+          <div className="loader">
+            <div className="loader-ring"></div>
+            <div className="loader-ring"></div>
+            <div className="loader-ring"></div>
+          </div>
+          <div className="loading-text">Processing your request...</div>
+        </div>
+      )}
+      
+      <ChatResponse response={response} />
     </div>
   )
 }
