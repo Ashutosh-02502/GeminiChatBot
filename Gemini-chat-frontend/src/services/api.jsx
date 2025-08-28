@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const API_URL = "http://localhost:8080/api/qna/ask";
+const API_URL = "https://geminichatbot-7lsf.onrender.com/api/qna/ask";
 
 export const fetchChatResponse = async (question) => {
     try {
